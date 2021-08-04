@@ -10,6 +10,13 @@ public class Multiplicacion {
 			int c = 12;
 		    int result = a * b * c;
 			System.out.println(result);
+			
+			
+			//second options
+			
+			int x = 78, y = 75, z =78;
+			System.out.println("Result: " + (a*b*c));
+			
 	}
 
 }
