@@ -16,6 +16,12 @@ public class Main {
 		animal = new Gato();
 		animal.speak();
 		
+		Animal gallo = new Gallo();
+		gallo.speak();
+		
+		Animal perro = new Perro();
+		perro.speak();
+		
 		
 	}
 

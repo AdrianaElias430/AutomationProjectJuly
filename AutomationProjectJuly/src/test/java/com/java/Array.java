@@ -27,11 +27,11 @@ public class Array {
 		nombreCompleto[3][0] = "Alejandra";
 		nombreCompleto[3][1] = "Soria";
 		
-		System.out.println("El nombre completo es " + nombreCompleto [0][0] +" "+ nombreCompleto [0][1]);
+		//System.out.println("El nombre completo es " + nombreCompleto [0][0] +" "+ nombreCompleto [0][1]);
 		
-		//for(int i = 0; i < nombreCompleto.length; i++) {
-			//System.out.println("El nombre completo es " + nombreCompleto [0][0] +" "+ nombreCompleto [0][1]);
-		//}	
+		for(int i = 0; i < nombreCompleto.length; i++) {
+			System.out.println("El nombre completo es " + nombreCompleto [i][0] +" "+ nombreCompleto [i][1]);
+		}	
 	}
 
 }
