@@ -4,6 +4,7 @@ import javax.swing.UIClientPropertyKey;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.asserts.SoftAssert;
 
 import com.opensource.base.Base;
 
@@ -41,6 +42,7 @@ public class AdminPage extends Base{
 		reporter("Click Admin - Go to the admin page");
 		click(lnkAdmin);
 		implicitlyWait();
+		takeScreenshot("Click Admin");
 	}
 	
 	
@@ -49,12 +51,16 @@ public class AdminPage extends Base{
 		type(txtSearchUserName, username);
 		click(btnSearch);
 		implicitlyWait();
+		takeScreenshot("SearchUser");
 	}
 	
 	
 	public void validateUsernameTable(String username) {
 		reporter("Verify this value..." + username + "in Admin user Table");
-		assertEquals(getText(tblUserName), username);
+		SoftAssert validTable = softAssertEquals(getText(tblUserName), username);
+		//assertEquals(getText(tblUserName), username);
+		validTable.assertAll();
+		takeScreenshot("Validate User");
 	}
 	
 	
@@ -69,6 +75,7 @@ public class AdminPage extends Base{
 		validateUsernameTable(username);
 		
 	}
+
 	
 
 }

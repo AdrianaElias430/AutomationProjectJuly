@@ -1,4 +1,4 @@
-package com.opensource.admin;
+package com.opensource.main;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +20,7 @@ public class LoginPage extends Base{
 	By btnLogin = By.xpath("//input[@id='btnLogin']");
 	By lnkWelcome = By.xpath("//a[@id='welcome']");
 	By lnkLogout = By.xpath("//a[contains(text(), 'Logout')]");
-	
+	By mnuAbuout = By.xpath("//*[@id='welcome-menu']");
  
 	
 	//Methods
@@ -43,8 +43,10 @@ public class LoginPage extends Base{
 	public void logoutOrange() {
 		reporter("Log out");
 		click(lnkWelcome);
+		waitForElementPresent(mnuAbuout);
 		click(lnkLogout);
 		implicitlyWait();
+		takeScreenshot("Close Browser");
 		closeBrowser();
 		
 	}
